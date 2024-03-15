@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+/* Body */
+body {
+    width: 100%;
+    background-image: url(./fotos/body-background-1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+/* Temas */
+#themes {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    background-color: rgba(255,255,255,.05);
+    box-shadow: 0 0 15px rgba(0,0,0,75);
+    border-radius: 10px;
+    padding: 5px;
+
+    transition: .5s;
+}
+
+/* Img Sun */
+img.sun {
+    height: 30px;
+    width: 30px;
+}
+
+/* Img Moon */
+img.moon {
+    height: 25px;
+    width: 25px;
+}
+
+#themes input {
+    display: none;
+}
+
+/* input radio */
+input {
+    cursor: pointer;
+}
+
+/* label radio */
+label {
+    cursor: pointer;
+}
+
+/* Título */
+.title {
+    text-align: center;
+    font-size: 38pt;
+    color: rgba(255,255,255,.85);
+    text-shadow: 0 0 40px #fff;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+/* Container */
+#container {
+    width: 50%;
+    background-color: rgba(255,255,255,.05);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,75);
+    padding: 20px;
+    margin: 125px 0 75px 0;
+    transition: 1s;
+}
+
+/* Form */
+#form {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 55% 25%;
+    gap: 10px;
+}
+
+/* Form Input */
+#form input {
+    padding: 10px;
+    font-size: 14pt;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+}
+
+/* Form Button */
+#form button {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14pt ;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(247,181,182);
+    color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+    transition: .5s;
+}
+
+#form button:hover {
+    box-shadow: 0 0 5px rgba(255,255,255,.4);
+}
+
+/* Baseboard (Rodapé) */
+#baseboard {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(255,255,255,.75);
+    padding: 10px 0;
+    color: rgb(85, 81, 81);
+    display: flex;
+    justify-content: center;
+}
+
+/* Task's List (Lista de Tarefas)*/
+#list {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: .5s;
+}
+
+/* Tasks (Tarefas) */
+.listItem {
+    width: 80%;
+    padding: 5px;
+    line-height: 25px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 85% 7.5% 7.5%;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    border-radius: 8px;
+    backdrop-filter: blur(1px);
+    font-weight: bold;
+    color: #fff;
+}
+
+/* taskText */
+.taskText {
+    text-indent: 10px;
+    font-size: 14pt;
+}
+
+/* Confirm Button */
+.btnDone img {
+    height: 17px;
+    width: 17px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Delete Button */
+.btnDelete img {
+    height: 17px;
+    width: 17px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Task as done (Tarefa como concluída) */
+.taskDone {
+    text-decoration: line-through;
+}
+
+
+@media (min-width: 250px) and (max-width: 500px) {
+    #container {
+        width: 100%;
+        transition: 1s;
+    }
+    #form {
+        grid-template-columns: 60% 40%;
+        transform: 1s;
+    }
+    .title {
+        font-size: 23pt;
+    }
+    #baseboard {
+        font-size: 9pt;
+    }
+}
+
+@media (max-width: 600px) {
+    #container {
+        width: 85%;
+        transition: 1s;
+    }
+    #form {
+        grid-template-columns: 50% 30%;
+        transition: 1s;
+    }
+    .title {
+        font-size: 30pt;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 850px) {
+    #container {
+        width: 70%;
+        transition: 1s;
+    }
+    #form {
+        grid-template-columns: 50% 30%;
+        transition: 1s;
+    }
+    .title {
+        font-size: 35pt;
+    }
+}
